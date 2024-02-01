@@ -1,10 +1,10 @@
 body{
     margin: 0;
-    backGround: pink;
+    background-color: lightblue; 
     text-align: center;
 }
 
 h1 {
-  color: blue;
+  
   margin-right: 300px;
 }
