@@ -62,12 +62,29 @@
 <img src="./images/main_dev.png" alt="main_dev"><br>
 <img src="./images/main_prod.png" alt="main_prod"><br>
 
-<p><b>4. app_config.jason and config reader  </b><br></p>
+<p><b>4.1. app_config.jason and config reader  </b><br></p>
 <p>As I mentioned earlier you might need to have have app_config.jason to keep your configuration more secure if no you can skipp this step<br></p>
-<p>4.1 Create app_config.json with your set og configuration. <br></p>
-<p>4.2 Create a class called ConfigReader to parse app_config file data.<br></p>
+<p>4.1.1 Create app_config.json with your set of configuration and include its directory to your .gitIgnore file . <br></p>
+<p>4.2.2 Create a class called ConfigReader to parse app_config file data.<br></p>
 <img src="./images/app_config_json.png" alt="app_config_json"><br>
+<img src="./images/gitignore.png" alt="gitignore"><br>
 <img src="./images/config_reader.png" alt="config_reader"><br>
+
+
+<p><b>4.2. flavor_config.dart file  </b><br></p>
+<p>Alternatively you might want to have your configuration setup in your code therefore you need to create a class called FlavorConfig.dart <br></p>
+<p>This is Singleton class that is holding the configuration data during development lifecycle, so you can access its member data anywhere is your code<br></p>
+<img src="./images/flavor_config.png" alt="flavor_config"><br>
+
+<p><b>5. Initialise ConfigReader() and FlavorConfig in mainCommon.dart  </b><br></p>
+<img src="./images/initialise_config_classes.png" alt="initialise_config_classes"><br>
+
+<p><b>6. All up to now was to setup environments </b><br></p>
+<p>Now you should be ready to run your app using different Environments by<br></p>
+<p>6.1 flutter run -t lib/main_dev.dart for dev and flutter run -t lib/main_prod.dart<br></p>
+<p>6.2 Creating new Run Configuration on your IDE for all your environments<br></p>
+<img src="./images/run_config_ide.png" alt="run_config_ide"><br>
+
 
 <br>
 </body>
