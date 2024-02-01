@@ -38,7 +38,7 @@
 <br>
 <p><b>**Note 1**:</b> having only environment doesn't allow you to have same app with different
     icon,
-    name and identifier. for that you also need to setup flavor for your project.</p><br>
+    name and identifier. For that you also need to setup flavor for your project.</p><br>
 <p><b>**Note 2**:</b> Usually for environments you can create app_config.json to keep sensitive or
     environment-specific configuration outside your codebase (never pushed to any repo, it is
     saved on local machine or pushed by CI/CD pipeline tools during app deployment) and easily switch between configurations for different environments (development, staging,
@@ -62,6 +62,12 @@
 <img src="./images/main_dev.png" alt="main_dev"><br>
 <img src="./images/main_prod.png" alt="main_prod"><br>
 
+<p><b>4. app_config.jason and config reader  </b><br></p>
+<p>As I mentioned earlier you might need to have have app_config.jason to keep your configuration more secure if no you can skipp this step<br></p>
+<p>4.1 Create app_config.json with your set og configuration. <br></p>
+<p>4.2 Create a class called ConfigReader to parse app_config file data.<br></p>
+<img src="./images/app_config_json.png" alt="app_config_json"><br>
+<img src="./images/config_reader.png" alt="config_reader"><br>
 
 <br>
 </body>
