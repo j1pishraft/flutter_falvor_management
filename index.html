@@ -35,10 +35,27 @@
     configurations, while environments are used to manage various stages of application development
     by adjusting settings and behaviors. Together, flavors and environments enhance the flexibility,
     maintainability, and scalability of Flutter applications.</p><br>
-    <br>
+<br>
+<p><b>**Note 1**:</b> having only environment doesn't allow you to have same app with different
+    icon,
+    name and identifier. for that you also need to setup flavor for your project.</p><br>
+<p><b>**Note 2**:</b> Usually for environments you can create app_config.json to keep sensitive or
+    environment-specific configuration outside your codebase (never pushed to any repo, it is
+    saved on local machine or pushed to deployment by using CI/CD pipeline tools during app build
+    time) and easily switch between configurations for different environments (development, staging,
+    production) by modifying the app_config.json file.</p><br>
+
 <p><b>Steps to create Environments</b><br></p>
 <p><b>1. Create enum for your Environment </b><br></p>
-<p>In your project root directory create a file called app_env.dart</p>
-<img src="./images/app_environment_enum.png" alt="app_env_enum">
+<p>In your project directory create a file called app_env.dart to create class "Environment"</p><br>
+<img src="./images/app_environment_enum.png" alt="app_env_enum"><br>
+<br>
+
+<p><b>2. Create main files  </b><br></p>
+<p>make a copy of main file and rename them based on how many environment you have<br></p>
+<p>In my case I have two environments, dev and prod so I need to have 3 main file, one for dev, one for prod and on main_common.dart<br></p>
+
+<img src="./images/rename_main_screen_shot.png" alt="rename_main_screen_shot"><br>
+<br>
 </body>
 </html>
