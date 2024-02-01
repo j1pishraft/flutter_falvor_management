@@ -3,3 +3,8 @@ body{
     backGround: pink;
     text-align: center;
 }
+
+h1 {
+  color: blue;
+  margin-right: 30px;
+}
