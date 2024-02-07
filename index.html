@@ -97,5 +97,23 @@
 <p><b>**Note**:</b> Keep in mind, as mentioned earlier the app will install based on current
     configuration and will replace the older installed version with the same name, icon and bundle identifier</p><br>
 <br>
+<br>
+
+<p><b>Steps to create Environments</b><br></p>
+<p><b>Now we go through to create flavor for both android and iOS</b><br></p>
+<p><b>In order to setup flavor make sure to create environments (follow the above steps).</b><br></p>
+<p><b>In this section we also demonstrate how to set up different Icons, Names, and bundle identifier for our project.</b><br></p>
+<br>
+<p><b>1. Android Setup </b><br></p>
+<p>1.1 In android folder open build.gradle file under app folder and add the following block code after buildTypes{} block<br></p>
+<p>This is a basic Configuration, there are more config that you can add like versionCode, versionName and applicationId<br></p>
+<img src="./images/build_gradle_code.png" alt="build_gradle_code"><br>
+<p><b>1.2.1 Create string.xml file for each flavor for application name</b><br></p>
+<p>Under android/app/src directory create folders based on number of flavors you have. In my case we have dev/res/values/string.xml and prod/res/values/string.xml<br></p>
+<img src="./images/app_name_xml_files.png" alt="app_name_xml_files"><br>
+<p><b>1.2.2 Open android/app/src/main/manifest.xml</b><br></p>
+<p>In manifest file add android:label="@string/app_name" inside application tag<br></p>
+<img src="./images/manifest_xml.png" alt="manifest_xml"><br>
+
 </body>
 </html>
