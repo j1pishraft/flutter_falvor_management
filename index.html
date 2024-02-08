@@ -68,21 +68,21 @@
 <img src="./images/main_dev.png" alt="main_dev"><br>
 <img src="./images/main_prod.png" alt="main_prod"><br>
 
-<p><b>4.1. app_config.jason and config reader </b><br></p>
+<p><b>4. app_config.jason and config reader </b><br></p>
 <p><b>**Note**:</b>As I mentioned earlier you might need to have have app_config.jason to keep your
     configuration
     more secure if no you can skipp this step<br></p>
-<p><b>4.1.1</b> Create app_config.json with your set of configuration and include its directory to
+<p><b>4.1</b> Create app_config.json with your set of configuration and include its directory to
     your
     .gitIgnore file . <br></p>
-<p><b>4.1.2</b> Create a class called ConfigReader to parse app_config file data.<br></p>
+<p><b>4.1.1</b> Create a class called ConfigReader to parse app_config file data.<br></p>
 <img src="./images/app_config_json.png" alt="app_config_json"><br>
 <img src="./images/gitignore.png" alt="gitignore"><br>
 <img src="./images/config_reader.png" alt="config_reader"><br>
 
 
 <p><b>4.2. flavor_config.dart file </b><br></p>
-<p>Alternatively you might want to have your configuration setup in your code therefore you need to
+<p><b>4.2.1</b> Alternatively you might want to have your configuration setup in your code therefore you need to
     create a class called FlavorConfig.dart <br></p>
 <p>This is Singleton class that is holding the configuration data during development lifecycle, so
     you can access its data anywhere is your code<br></p>
