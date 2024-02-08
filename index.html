@@ -139,7 +139,7 @@
 <img src="./images/flutter_launcher_yaml.png" alt="flutter_launcher_yaml"><br>
 <p><b>1.3.4 run the "flutter pub run flutter_launcher_icons:main -f flutter_launcher_icons*" command
     from terminal </b><br></p>
-<p>Now the necessary icons assets will be created for both android and iOS (below image is for
+<p>Now the necessary icons assets with different resolution will be created for both android and iOS (below image is for
     Android)<br></p>
 <img src="./images/auto_generate_icons.png" alt="auto_generate_icons"><br>
 <p><b>To test your app you can run your project by the following
@@ -162,11 +162,44 @@
 <img src="./images/set_scheme_3.png" alt="set_scheme_3"><br>
 
 <p><b>2.3 Setup Build configuration</b><br></p>
-<p>From right pane select Runner then under project pane select Runner select info tab and add configurations. in our case we dev and prod</p>
+<p>From left pane select Runner then under project pane select Runner select info tab and add configurations. in our case we dev and prod</p>
 <img src="./images/ios_build_config.png" alt="ios_build_config"><br>
 
 <p><b>2.4 Edit dev and prod schemes with correct build config accordingly</b><br></p>
 <img src="./images/scheme_dev_config.png" alt="scheme_dev_config"><br>
 <img src="./images/scheme_prod_config.png" alt="scheme_prod_config"><br>
+
+<p><b>2.5 Set app icons</b><br></p>
+<p><b>2.5.1 From left pane "select Runner/assets.xcassets" to make sure the auto generated icons with different resolution are available for your favors</b></p>
+<img src="./images/ios_auto_gen_icons.png" alt="ios_auto_gen_icons"><br>
+
+<p><b>2.5.2 Go to "Targets/Runner" select Build Settings and search for "icon". Under "Asset Catalog/Primary App Icon Set Name" set the icons for each flavor accordingly</b></p>
+<img src="./images/set_ios_app_icon.png" alt="set_ios_app_icon"><br>
+
+<p><b>2.6 Set Product Bundle Identifier</b><br></p>
+<p><b>2.6.1 Go to "Targets/Runner" select Build Settings and search for "Product Bundle". Under "Packaging/Product Bundle Identifier" set app bundles for each flavor accordingly</b></p>
+<img src="./images/ios_product_bundle.png" alt="ios_product_bundle"><br>
+
+<p><b>2.7 Set app name</b><br></p>
+<p><b>2.7.1 From left pane select "Runner/info.plist". Inside here add a property called "Bundle display name" and set its value to "$(PRODUCT_NAME)" </b></p>
+<img src="./images/ios_app_display_name_info_plist.png" alt="ios_app_display_name_info_plist"><br>
+
+<p><b>2.7.2 Go to "Targets/Runner/General" tab leave Display name empty</b></p>
+<img src="./images/leave_main_display_name_empty.png" alt="leave_main_display_name_empty"><br>
+
+<p><b>2.7.3 lastly Go to "Targets/Runner/Build Setting" and search for "product name". Here set the app name for each flavor</b></p>
+<img src="./images/define_ios_app_names.png" alt="define_ios_app_names"><br>
+
+
+<p><b>2.8 For final step you need to select proper Flutter_Target for each flavor</b><br></p>
+<p><b>2.8.1 Go to "Targets/Runner/Build Setting" and search for "flutter". Under "Flutter_Target" select the proper main.dart for your flavors</b></p>
+<img src="./images/ios_set_flutter_target.png" alt="ios_set_flutter_target"><br>
+
+<p><b>2.9 Run iOs app</b><br></p>
+<p><b>2.8.1 Now you can run your by running this command into your terminal "flutter run --flavor prod -t lib/main_dev.dart" </b></p>
+<p><b>2.8.1 Alternatively you can run your app either form your IDE or xcode configuration setting</b></p>
+
+<p><b>***********:</b> Congratulation now Environments and Flavors has been set up for both android and iOS<b>***********:</b></p><br>
+
 </body>
 </html>
