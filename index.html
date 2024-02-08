@@ -49,7 +49,7 @@
     switch between configurations for different environments (development, staging,
     production) by modifying the app_config.json file.</p><br>
 
-<p><b>Steps to create Environments</b><br></p>
+<p><b>*****Steps to create Environments*****</b><br></p>
 <p><b>1. Create enum for your Environment </b><br></p>
 <p>In your project directory create a file called app_env.dart to create class "Environment"</p><br>
 <img src="./images/app_environment_enum.png" alt="app_env_enum"><br>
@@ -105,7 +105,7 @@
 <br>
 <br>
 
-<p><b>Steps to create flavors </b><br></p>
+<p><b>******Steps to create flavors***** </b><br></p>
 <p><b>Now we go through to create flavor for both Android and iOS</b><br></p>
 <p><b>**Note**:</b> In order to setup flavor make sure you have set up environments (follow the
     above steps).<br>
@@ -114,33 +114,34 @@
     identifier for our project.</b><br></p>
 <br>
 <p><b>1. Android Setup </b><br></p>
-<p><b>1.1</b> In android folder open build.gradle file under app folder and add the following block
+<p><b>1.1 In android folder open build.gradle file under app folder and add the following block
     code
-    after buildTypes{} block<br></p>
+    after buildTypes{} block</b><br></p>
 <p>This is a basic Configuration, there are more config that you can add like versionCode,
     versionName and applicationId<br></p>
 <img src="./images/build_gradle_code.png" alt="build_gradle_code"><br>
+<p><b>1.2 Create application name</b><br></p>
 <p><b>1.2.1</b> Create string.xml file for each flavor for application name<br></p>
-<p>Under android/app/src directory create folders based on number of flavors you have. In my case we
-    have dev/res/values/string.xml and prod/res/values/string.xml<br></p>
+<p>Under "android/app/src" directory create folders based on number of flavors you have. In my case we
+    have "dev/res/values/string.xml" and "prod/res/values/string.xml"<br></p>
 <img src="./images/app_name_xml_files.png" alt="app_name_xml_files"><br>
-<p><b>1.2.2</b> "Open android/app/src/main/manifest.xml"<br></p>
-<p>In manifest file add android:label="@string/app_name" inside application tag<br></p>
+<p><b>1.2.2</b> Open "android/app/src/main/manifest.xml"<br></p>
+<p>In manifest file add "android:label="@string/app_name"" inside application tag<br></p>
 <img src="./images/manifest_xml.png" alt="manifest_xml"><br>
 
 <p><b>1.3 Create app icons</b><br></p>
 <p><b>**Note**:</b> This step will create assets for both android and iOS</p><br>
-<p><b>1.3.1</b> add flutter_launcher_icons package in pubspec.yaml file under dev_dependencies:<br>
+<p><b>1.3.1</b> add "flutter_launcher_icons" package in "pubspec.yaml" file under "dev_dependencies:"<br>
 </p>
 <img src="./images/pubspec_yaml.png" alt="pubspec_yaml"><br>
-<p><b>1.3.2</b> Create assets/icons folder under project root directory and locate the icons file in
+<p><b>1.3.2</b> Create "assets/icons" folder under project root directory and locate the icons file in
     this folder<br></p>
 <p><b>**Note**:</b> icons sizes should be 512*512 in png format and make sure Alpha Filter is
     removed when you save the photo</p><br>
 <img src="./images/icons.png" alt="icons"><br>
 <img src="./images/alpha_filter.png" alt="alpha_filter"><br>
-<p><b>1.3.3</b> Create flutter launcher yaml file for your flavors, flutter_launcher_icons-dev.yaml
-    flutter_launcher_icons-prod.yaml <br></p>
+<p><b>1.3.3</b> Create flutter launcher yaml file for your flavors, "flutter_launcher_icons-dev.yaml"
+    "flutter_launcher_icons-prod.yaml" <br></p>
 <img src="./images/flutter_launcher_yaml.png" alt="flutter_launcher_yaml"><br>
 <p><b>1.3.4</b> Run the <b>"flutter pub run flutter_launcher_icons:main -f
     flutter_launcher_icons*"</b> command
@@ -153,7 +154,7 @@
 <p><b>1.4.1</b> To test your app you can run your project with the following
     command: <b>"flutter run --flavor prod -t lib/main_dev.dart"</b>
     or <b>"flutter run --flavor prod -t lib/main_prod.dart" in your terminal</b><br></p>
-<p><b>1.4.1</b> Alternatively you can setup run configuration on your IDE<br></p>
+<p><b>1.4.2</b> Alternatively you can setup run configuration on your IDE<br></p>
 <img src="./images/dev_flavor_run_config.png" alt="dev_flavor_run_config"><br>
 <img src="./images/prod_flavor_run_config.png" alt="prod_flavor_run_config"><br>
 <p><b>Now based on your Flavor you will have separate app with different name and icon</b><br></p>
